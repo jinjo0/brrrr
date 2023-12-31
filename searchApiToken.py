@@ -31,10 +31,9 @@ with concurrent.futures.ThreadPoolExecutor(max_workers=CONNECTIONS) as executor:
             if "api.telegram" in str(data):
                 print("found")
                 result.write(url+"\n")
-                print()
 
         except Exception as exc:
-            print(str(exc))
+            #print(str(exc))
             data = str(type(exc))
         finally:
             out.append(data)
